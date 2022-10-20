@@ -886,7 +886,7 @@ a:hover {
 }
 
 .footer {
-  background: var(--black) url(../images/vectores/patron-2.png) no-repeat;
+  background: var(--black) url(../images/vectores/patron-1.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 3rem 4% !important;
