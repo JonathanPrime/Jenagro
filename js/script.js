@@ -206,13 +206,16 @@ $('.clear-cart').click(function () {
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
+  var text = "x Libra"
+  var text2 = "Libra(s)"
+  console.log(cartArray);
   for (var i in cartArray) {
     output += "<tr>"
       + "<td id='name' style='word-break: break-all;'>" + cartArray[i].name + "</td>"
-      + "<td id='value'>(" + cartArray[i].price + ")</td>"
+      + "<td id='value'>(" + text + ")</td>"
       + "<td><div class='input-group'>"
       /* + "<button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" */
-      + "<input type='number' class='item-count form-control' disabled data-name='" + cartArray[i].name + "' id='cant' value='" + cartArray[i].count + "'>"
+      + "<input type='text' class='item-count form-control' disabled data-name='" + cartArray[i].name + "' id='cant' value='" + cartArray[i].count + ' ' + text2 +"'>"
     /* + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button>" */
     "</div></td>"
       + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
@@ -226,7 +229,7 @@ function displayCart() {
 
   if (cartArray.length > 0) {
     let espacio = "%20";
-    let textoFormateado = espacio + "(" + "x" + cartArray[i].count + espacio + cartArray[i].name + espacio + "de" + espacio + cartArray[i].price + espacio + ")" + espacio;
+    let textoFormateado = espacio + "(" + cartArray[i].price + espacio + "Libra" + espacio + "de" + espacio + cartArray[i].name + espacio + ")" + espacio;
     carritoEnTexto = agregaTextoABase(carritoEnTexto, "", textoFormateado);
     console.log("Esto es carrito ----> " + carritoEnTexto);
   }
@@ -600,14 +603,14 @@ sendOrderBtn.addEventListener("click", () => {
     let dir_user_uri = dir_user.replace(/ /g, "%20").replace(/#/g, "Num.");
     let msg = document.getElementById('send_order').value;
     let relmsg = msg.replace(/ /g, "%20");
-    var total_order = document.getElementById("total_order").innerHTML.toString();
+    /* var total_order = document.getElementById("total_order").innerHTML.toString(); */
 
     window.open('https://wa.me/573105884818?text=' + relmsg + "%0a"
       + "---------------------------------" + "%0a"
       + "       DATOS DEL PEDIDO          " + "%0a"
       + "---------------------------------" + "%0a"
       + carritoEnTexto + "%0a"
-      + "Total orden: $" + "%0a"
+      /* + "Total orden: $" + "%0a" */
       + "---------------------------------" + "%0a"
       + "       DATOS DE CONTACTO          " + "%0a"
       + "---------------------------------" + "%0a"

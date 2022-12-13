@@ -100,6 +100,23 @@ p {
   background:  var(--palet-1);
 }
 
+.btn-tertiary {
+  border: 1px solid transparent !important;
+  padding: .375rem .75rem !important;
+  cursor: pointer !important;
+  color:  var(--white) !important;
+  background: var(--palet-1) !important;
+  font-size: 2rem !important;
+  line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.btn-tertiary:hover {
+  color: var(--white) !important;
+  background:  var(--palet-1) !important;
+}
+
+
 .btn-contact {
   display: inline-block !important;
   margin-top: 1rem !important;
@@ -598,7 +615,7 @@ a:hover {
 .own-script {
   font-family: 'MontserratRegular';
   font-size: 7rem;
-  color:  var(--palet-1);
+  color:  var(--black);
 }
 
 .about .image {
@@ -624,7 +641,7 @@ a:hover {
   margin-top: -3rem;
   text-transform: uppercase;
   font-family: 'CampuniBlack';
-  color:  var(--black);
+  color:  var(--palet-2);
 }
 
 .about .content p {
@@ -886,7 +903,7 @@ a:hover {
 }
 
 .footer {
-  background: var(--black) url(../images/vectores/patron-1.png) no-repeat;
+  background: var(--black) url(../images/vectores/patron-2.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 3rem 4% !important;
@@ -1256,7 +1273,7 @@ input.whats-input[type=text]:focus {
 }
 
 .table td, .table th, .item-count, .total-cart, .total {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .item-count {
